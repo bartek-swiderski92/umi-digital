@@ -1,5 +1,7 @@
 .App {
     display: flex;
     flex-direction: column;
-    background-color: rgb(249, 248, 246);
+    margin: 0 auto;
+    max-width: 1091px;
+
 }
