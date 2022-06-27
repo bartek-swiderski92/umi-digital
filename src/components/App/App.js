@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Switch, Route, } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import { API } from "../../main"
 
@@ -23,18 +23,29 @@ function App() {
 
   useEffect(() => fetchData(), [])
 
+  function displayData(array, amountOfElements) {
+    const displayArr = []
+    if (Array.isArray(array)) {
+      const filmsArr = films.map(film => {
+        return <Film key={film.id} filmId={film.id} image={film.image} title={film.title} description={film.description} />
+      })
+      for (let i = 0; i < amountOfElements; i++) {
+        const film = filmsArr[i];
+        displayArr.push(film)
+      }
+      return displayArr
+    }
+
+  }
+
   return (
     <div className="App">
       <BrowserRouter>
         <Switch>
           <Route exact path="/">
-            {(() => {
-              if (Array.isArray(films)) {
-                return films.map(film => {
-                  return <Film key={film.id} filmId={film.id} image={film.image} title={film.title} description={film.description} />
-                })
-              }
-            })()}
+            <div className="films-wrapper">
+              {displayData(films, 5)}
+            </div>
           </Route>
           <Route path="/film/:id">
             <SingleFilm />
