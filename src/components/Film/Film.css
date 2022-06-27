@@ -9,6 +9,7 @@
 @media (max-width: 780px) {
     .film {
         flex-direction: column;
+        margin-left: 10px;
     }
 }
 
@@ -85,5 +86,17 @@
         background: no-repeat;
         padding-top: 20px;
         padding-left: 20px;
+    }
+}
+
+@media (max-width: 450px) {
+    .film-info__background-image img {
+        transform: scaleX(-1) translateX(-30%);
+    }
+}
+
+@media (max-width: 380px) {
+    .film-info__background-image img {
+        transform: scaleX(-1) translateX(-40%);
     }
 }
