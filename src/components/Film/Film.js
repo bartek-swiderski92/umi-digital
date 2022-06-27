@@ -9,9 +9,9 @@ export const Film = ({ filmId, image, title, description }) => {
 
     return (
         <div className="film">
-            <div class="film-img-container">
+            <div className="film-img-container">
                 <img className="film-img" src={image} alt={`${title} cover`} />
-                <div className="background-img"/>
+                <div className="background-img" />
 
             </div>
             <div className="film-info">
