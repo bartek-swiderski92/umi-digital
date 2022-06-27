@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/umi-digital/static/css/main.3ea95eeb.css",
+    "main.js": "/umi-digital/static/js/main.aa9134f8.js",
+    "static/js/787.71702bfa.chunk.js": "/umi-digital/static/js/787.71702bfa.chunk.js",
+    "static/media/bg-wave.svg": "/umi-digital/static/media/bg-wave.f936a36d87341b3f44c2.svg",
+    "static/media/totoro.png": "/umi-digital/static/media/totoro.13fe3b4fc2fc462ef6cd.png",
+    "index.html": "/umi-digital/index.html",
+    "main.3ea95eeb.css.map": "/umi-digital/static/css/main.3ea95eeb.css.map",
+    "main.aa9134f8.js.map": "/umi-digital/static/js/main.aa9134f8.js.map",
+    "787.71702bfa.chunk.js.map": "/umi-digital/static/js/787.71702bfa.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3ea95eeb.css",
+    "static/js/main.aa9134f8.js"
+  ]
+}
