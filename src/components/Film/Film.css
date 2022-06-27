@@ -1,0 +1,21 @@
+.film {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.film-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.film-info__title {
+    font-size: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+}
+
+.film-info__description {
+    font-size: 1.2rem;
+    width: 70%;
+}
