@@ -1,19 +1,20 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter, Switch, Route, } from 'react-router-dom';
+
+import { API } from "../../main"
 
 import { Film } from '../Film/Film';
+import { SingleFilm } from '../SingleFilm/SingleFilm';
 import './App.css';
 
 function App() {
-
-  const API = "https://ghibliapi.herokuapp.com/films";
 
   const [films, setFilms] = useState([]);
 
   function fetchData() {
     axios.get(API)
       .then(res => {
-        console.log(res)
         setFilms(res.data)
       })
       .catch(error =>
@@ -24,13 +25,22 @@ function App() {
 
   return (
     <div className="App">
-      {(() => {
-        if (Array.isArray(films)) {
-          return films.map(film => {
-            return <Film key={film.id} image={film.image} title={film.title} description={film.description} />
-          })
-        }
-      })()}
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/">
+            {(() => {
+              if (Array.isArray(films)) {
+                return films.map(film => {
+                  return <Film key={film.id} image={film.image} title={film.title} description={film.description} />
+                })
+              }
+            })()}
+          </Route>
+          <Route path="/film/:id">
+            <SingleFilm />
+          </Route>
+        </Switch >
+      </BrowserRouter>
     </div>
   );
 }
