@@ -26,7 +26,7 @@ export const SingleFilm = () => {
     return (
         <div>
             <div className="single-film">
-                <img className="single-film-img" src={film.image} alt={`${film.title} cover`} />
+                <img className="single-film-img" src={film.movie_banner} alt={`${film.title} cover`} />
                 <div className="single-film-info">
                     <h1 className="single-film-info__title film-info__title">{film.title}</h1>
                     <h2 className="single-film-info__director">Director: {film.director}</h2>
