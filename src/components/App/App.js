@@ -31,7 +31,7 @@ function App() {
             {(() => {
               if (Array.isArray(films)) {
                 return films.map(film => {
-                  return <Film key={film.id} image={film.image} title={film.title} description={film.description} />
+                  return <Film key={film.id} filmId={film.id} image={film.image} title={film.title} description={film.description} />
                 })
               }
             })()}

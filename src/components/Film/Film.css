@@ -40,4 +40,5 @@
     height: 100%;
     transform: scaleX(-1);
     opacity: .2;
+    z-index: -999;
 }
